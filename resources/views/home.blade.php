@@ -2,7 +2,7 @@
 
     <!-- HERO IMAGE -->
     <section class="relative w-full h-[550px]">
-        <img src="/image/bg.jpeg"
+        <img src="/image/cortis.jpeg"
              class="w-full h-full object-cover brightness-75">
 
         <div class="absolute inset-0 flex flex-col justify-center items-center text-white text-center">
@@ -35,7 +35,7 @@
             <div>
                 <div class="text-purple-500 text-4xl mb-3">🎟️</div>
                 <h3 class="font-bold text-lg">TERIMA TIKET</h3>
-                <p class="text-gray-500 mt-2">Via email atau akun anda.</p>
+                <p class="text-gray-500 mt-2">Via email atau langsung di akun anda.</p>
             </div>
 
         </div>
