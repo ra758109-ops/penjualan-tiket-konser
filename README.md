@@ -36,11 +36,11 @@ untuk menghasilkan desain yang responsif dan konsisten.
 #### Halaman Home
 ![Home](screenshots/Home.png)
 
-#### Halaman Tiket
-![Tickets](screenshots/Tickets.png)
-
 #### Daftar Event
 ![Events](screenshots/Events.png)
+
+#### Halaman Tiket
+![Tickets](screenshots/Tickets.png)
 
 #### Halaman Shop
 ![Shop](screenshots/Shop.png)
