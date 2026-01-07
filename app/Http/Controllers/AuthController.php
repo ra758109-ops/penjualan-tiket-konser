@@ -10,7 +10,7 @@ class AuthController extends Controller
 {
     public function loginForm()
     {
-        return view('auth.login');
+        return view('Auth.login');
     }
 
     public function login(Request $request)
@@ -22,6 +22,11 @@ class AuthController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+
+            if (Auth::user()->role === 'admin') {
+                return redirect()->route('admin.dashboard');
+            }
+
             return redirect()->route('home');
         }
 
@@ -32,7 +37,7 @@ class AuthController extends Controller
 
     public function register()
     {
-        return view('auth.register');
+        return view('Auth.register');
     }
 
     public function store(Request $request)
@@ -47,9 +52,10 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
+            'role' => 'user',
         ]);
 
-        return redirect()->route('login')->with('success', 'Akun berhasil dibuat!');
+        return redirect()->route('login');
     }
 
     public function logout(Request $request)
@@ -57,6 +63,7 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+
         return redirect()->route('login');
     }
 }

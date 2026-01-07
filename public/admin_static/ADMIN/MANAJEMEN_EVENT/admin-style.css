@@ -1,0 +1,441 @@
+/* Reset & Global */
+:root {
+    /* INI KODE WARNA YANG BENAR 
+      (Sesuai style Dashboard Biru Navy/Biru Cerah Anda)
+    */
+    --color-primary: #0D6EFD; /* Biru Cerah (untuk link aktif) */
+    --color-primary-dark: #0A58CA;
+
+    --color-sidebar-bg: #0B2447; /* Biru Navy Gelap (Sidebar BG) */
+    --color-sidebar-text: #A5C9FF; /* Teks di sidebar */
+
+    --color-sidebar-active-bg: #0D6EFD; /* Background link aktif */
+    --color-sidebar-active-text: #FFFFFF; /* Teks link aktif */
+
+    --color-content-bg: #F0F4F8; /* Abu-abu sangat muda (BG Konten) */
+    --color-card-bg: #FFFFFF;
+    --color-text-primary: #333333;
+    --color-text-secondary: #667085;
+    --color-border: #E0E7FF;
+    --color-status-green: #10B981;
+    --color-status-green-bg: #E7F8F3;
+    --color-status-orange: #F59E0B;
+    --color-status-orange-bg: #FEF7E7;
+    --color-status-gray: #6B7280;
+    --color-status-gray-bg: #F3F4F6;
+    --color-danger: #EF4444;
+    --color-danger-bg: #FEF2F2;
+
+    --font-family: 'Inter', sans-serif;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --radius-md: 8px;
+    --radius-sm: 6px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-content-bg);
+    color: var(--color-text-primary);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Layout Utama Admin */
+.admin-layout {
+    display: flex;
+}
+
+.admin-sidebar {
+    width: 260px;
+    background-color: var(--color-sidebar-bg);
+    color: var(--color-sidebar-text);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* INI PERBAIKANNYA: 
+  Menggunakan class .admin-main-content (sesuai HTML Anda)
+*/
+.admin-main-content {
+    margin-left: 260px; /* Sama dengan lebar sidebar */
+    width: calc(100% - 260px);
+    padding: 32px;
+}
+
+/* Logo Sidebar (Warna ungu dari Dashboard) */
+.admin-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #AD88FF; /* Warna ungu (ini sudah benar di kedua versi) */
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+/* Navigasi Sidebar */
+.admin-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.admin-nav ul li a svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    fill: none; /* Default: ikon outline */
+    transition: all 0.2s ease;
+}
+
+.admin-nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Link aktif (sesuai Dashboard Biru Cerah) */
+.admin-nav ul li a.active {
+    background-color: var(--color-sidebar-active-bg);
+    color: var(--color-sidebar-active-text);
+    font-weight: 700; /* Dibuat tebal */
+}
+
+/* Membuat IKON JADI SOLID saat 'active' (Sesuai Dashboard) */
+.admin-nav ul li a.active svg {
+    fill: currentColor; /* Mengisi ikon dengan warna teks (putih) */
+}
+
+
+li.separator {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 8px 0;
+}
+
+/* INI PERBAIKANNYA: 
+  Menggunakan class .content-header (sesuai HTML Anda)
+*/
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.content-header h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+/* Tombol (Buttons) */
+.btn {
+    border: none;
+    padding: 10px 16px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+    background-color: var(--color-content-bg);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+}
+.btn-secondary:hover {
+    background-color: #E0E7FF;
+}
+
+.btn-light {
+    background-color: var(--color-card-bg);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+}
+.btn-light:hover {
+    background-color: var(--color-content-bg);
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    transition: all 0.2s ease;
+}
+.btn-icon svg {
+    width: 16px;
+    height: 16px;
+}
+.btn-icon.btn-edit:hover {
+    background-color: var(--color-primary-dark);
+    color: white;
+}
+.btn-icon.btn-delete:hover,
+.btn-icon.btn-remove-tier:hover {
+    background-color: var(--color-danger);
+    color: white;
+}
+.btn-icon.btn-remove-tier {
+    color: var(--color-danger);
+    font-size: 1.25rem;
+    padding: 0 8px;
+    line-height: 1;
+}
+
+/* Card (Class ini sudah benar di HTML Anda) */
+.card {
+    background-color: var(--color-card-bg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-border);
+}
+
+.card-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.card-table {
+    overflow-x: auto; /* Agar tabel bisa di-scroll di HP */
+}
+
+/* Form Search */
+.form-search {
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+}
+.form-search:focus {
+    outline: 2px solid var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* Tabel */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+    padding: 16px 24px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+}
+
+.admin-table th {
+    background-color: #F9FAFB;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.admin-table tbody tr:hover {
+    background-color: #F9FAFB;
+}
+
+.event-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.table-img {
+    width: 80px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.admin-table td:last-child {
+    display: flex;
+    gap: 8px;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.status-badge.status-upcoming {
+    color: var(--color-status-green);
+    background-color: var(--color-status-green-bg);
+}
+.status-badge.status-done {
+    color: var(--color-status-gray);
+    background-color: var(--color-status-gray-bg);
+}
+.status-badge.status-pending { 
+    color: var(--color-status-orange);
+    background-color: var(--color-status-orange-bg);
+}
+
+/* Modal (Semua class di dalam modal sudah global 
+  dan akan ikut otomatis) 
+*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Diubah oleh JS */
+    z-index: 1000;
+    justify-content: center;
+    align-items: flex-start; /* Mulai dari atas */
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--color-card-bg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 700px; /* Lebar modal */
+    margin: auto;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.75rem;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-form {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="datetime-local"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-family: var(--font-family);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Ticket Tier Dinamis */
+#kategoriTiketList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.ticket-tier-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.ticket-tier-item .tier-name { flex: 3; }
+.ticket-tier-item .tier-price { flex: 2; }
+.ticket-tier-item .tier-quota { flex: 1; }
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 24px;
+    border-top: 1px solid var(--color-border);
+}

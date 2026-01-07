@@ -1,0 +1,66 @@
+/* ========================================================================= */
+/* --- PERBAIKAN STRUKTUR & KONTEN UTAMA --- */
+/* ========================================================================= */
+
+/* Pastikan Konten Utama Menempati Sisa Ruang */
+.admin-main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 32px;
+    /* Properti ini penting agar semua elemen di dalamnya (termasuk card) tampil baik */
+    flex-grow: 1; 
+    min-height: 100vh;
+}
+
+/* Penyesuaian Header Halaman untuk Tata Letak yang Fleksibel */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap; /* Agar elemen bisa turun baris jika sempit */
+    gap: 16px; 
+}
+
+/* ========================================================================= */
+/* --- KUNCI: Membuat Tabel Responsif dan Tidak Terpotong --- */
+/* ========================================================================= */
+
+.card-table {
+    /* Properti ini memastikan tabel di dalamnya (admin-table) 
+       dapat digulir (scroll) secara horizontal jika lebar tabel 
+       melebihi lebar container card.
+    */
+    overflow-x: auto; 
+    width: 100%; /* Pastikan kontainer mengambil 100% lebar card */
+    
+}
+
+
+
+.admin-table {
+    
+    min-width: 900px; 
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th, .admin-table td {
+    padding: 14px 24px;
+    
+}
+
+
+.admin-table td:last-child {
+    display: flex;
+    gap: 4px; 
+    width: 120px; 
+    flex-shrink: 0;
+}
+
+
+.status-badge {
+    white-space: nowrap; 
+    min-width: 70px; /* Lebar minimum agar konsisten */
+    text-align: center;
+}
