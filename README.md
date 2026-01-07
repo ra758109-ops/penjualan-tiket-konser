@@ -21,7 +21,7 @@ untuk menghasilkan desain yang responsif dan konsisten.
 - Detail Tiket
 - Pembelian Tiket
 - Konfirmasi Pembelian
-- form penjualan tiket
+- form pengajuan penjualan tiket oleh pengguna
 
 ## 🛠️ Teknologi
 - Laravel
