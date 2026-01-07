@@ -49,10 +49,10 @@ untuk menghasilkan desain yang responsif dan konsisten.
 ![Confirmation](screenshots/confirmation.png)
 
 ### Form Pengajuan Jual Tiket
-![Form Jual Tiket](screenshots/form-jual-tiket.png)
+![Form Jual Tiket](screenshots/formjualtiket.png)
 
 ### Pengajuan Berhasil
-![Berhasil](screenshots/form-berhasil.png)
+![Berhasil](screenshots/formberhasil.png)
 
 ### Tiket Masuk ke Marketplace
 ![Shop](screenshots/shop.png)
