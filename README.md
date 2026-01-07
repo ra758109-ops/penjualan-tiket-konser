@@ -31,31 +31,31 @@ untuk menghasilkan desain yang responsif dan konsisten.
 - JavaScript
 - MySQL
 
-## 📷 Screenshot Fitur
+### 📸 Screenshot Fitur
 
-### Halaman Home
-![Home](screenshots/home.png)
+#### Halaman Home
+![Home](screenshots/Home.png)
 
-### Halaman Events
-![Events](screenshots/events.png)
+#### Halaman Tiket
+![Tickets](screenshots/Tickets.png)
 
-### Halaman Tiket
-![Tickets](screenshots/tickets.png)
+#### Daftar Event
+![Events](screenshots/Events.png)
 
-### Halaman Shop
-![Shop](screenshots/shop.png)
+#### Halaman Shop
+![Shop](screenshots/Shop.png)
 
-### Halaman Konfirmasi
-![Confirmation](screenshots/confirmation.png)
+#### Konfirmasi Pesanan
+![Confirmation](screenshots/Order%20Confirmation.png)
 
-### Form Pengajuan Jual Tiket
-![Form Jual Tiket](screenshots/formjualtiket.png)
+#### Form Jual Tiket
+![Form Jual](screenshots/form%20jual%20tiket.png)
 
-### Pengajuan Berhasil
-![Berhasil](screenshots/formberhasil.png)
+#### Berhasil Kirim Form
+![Berhasil](screenshots/Form%20berhasil.png)
 
-### Tiket Masuk ke Marketplace
-![Shop](screenshots/shop.png)
+
+
 
 
 ## ▶️ Cara Menjalankan
