@@ -2,7 +2,8 @@
 ## Sistem Penjualan Tiket Konser
 
 ## 👥 Anggota Kelompok
-- raihan nurul islami
+- raihan nurul islami ( mmebuat bagian user)
+- jihan ammara syakila (membuat bagian admin) *blm selesai dikerjakan*
 
 ## 📌 Deskripsi Proyek
 Aplikasi Penjualan Tiket Konser berbasis web menggunakan framework Laravel.
