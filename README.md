@@ -56,7 +56,7 @@ untuk menghasilkan desain yang responsif dan konsisten.
 ![Berhasil](screenshots/Form%20berhasil.png)
 
 #### Dashboard Admin
-![Berhasil](DashboardAdmin.png)
+![Berhasil](DashboardAdmin.jpeg)
 
 
 
