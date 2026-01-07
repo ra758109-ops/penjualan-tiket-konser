@@ -55,7 +55,8 @@ untuk menghasilkan desain yang responsif dan konsisten.
 #### Berhasil Kirim Form
 ![Berhasil](screenshots/Form%20berhasil.png)
 
-
+#### Admin
+![alt text](https://github.com/ra758109-ops/penjualan-tiket-konser/blob/main/public/DashboardAdmin.jpeg?raw=true)
 
 
 
