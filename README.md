@@ -31,6 +31,7 @@ untuk menghasilkan desain yang responsif dan konsisten.
 - Tailwind CSS
 - JavaScript
 - MySQL
+- XAMPP
 
 ### 📸 Screenshot Fitur
 
