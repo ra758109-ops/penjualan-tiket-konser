@@ -34,6 +34,12 @@ untuk menghasilkan desain yang responsif dan konsisten.
 
 ### 📸 Screenshot Fitur
 
+### Daftar akun
+![Akun](screenshots/Daftar%20Akun.png)
+
+### Login
+![Login](screenshots/Login.png)
+
 #### Halaman Home
 ![Home](screenshots/Home.png)
 
